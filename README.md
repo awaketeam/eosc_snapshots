@@ -3,7 +3,13 @@
 ## 解压下载的文件
 ```
 tar -zxvf xxxx.tar.gz
-````
+```
+
+## 修改config.ini文件，加载producer_api_plugin
+```config.ini
+plugin = eosio::producer_plugin
+plugin = eosio::producer_api_plugin
+```
 
 ## 从快照文件中启动新节点
 ```bash
