@@ -1,5 +1,11 @@
 # 使用快照
 
+## 解压下载的文件
+```
+tar -zxvf xxxx.tar.gz
+````
+
+## 从快照文件中启动新节点
 ```bash
 ./nodeos --config-dir=./testconfig/config --data-dir=./emptydata --snapshot=./snapshots/snapshot-00026ec1a4bfebb0c3a32e81c54856798ebc6c564d853321e0cc6aa4d5da8259.bin
 ```
