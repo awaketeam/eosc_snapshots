@@ -26,18 +26,18 @@ plugin = eosio::producer_api_plugin
 ```
 
 ## 5、准备好节点的数据目录
-目录格式如下
+目录格式如下  
 ├── node_data   
-│   ├── nodeosd.sh   
-│   ├── snapshot.bin   
-│   ├── config   
-│   │   ├── activeacc.json      
-│   │   ├── config.ini   
-│   │   ├── eosio.lock.abi   
-│   │   ├── ...   
-│   │   └── genesis.json   
-│   ├── data   
-│   │   (此目录一定要为空)
+│       ├── nodeosd.sh   
+│       ├── snapshot.bin   
+│       ├── config   
+│       │      ├── activeacc.json      
+│       │      ├── config.ini   
+│       │      ├── eosio.lock.abi   
+│       │      ├── ...   
+│       │      └── genesis.json   
+│       ├── data   
+│       │   (此目录一定要为空)
 
 ## 6、先启动一个预备容器来处理快照数据
 
