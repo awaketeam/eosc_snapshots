@@ -10,7 +10,9 @@ docker pull eosforce/node:v1.8.3
 
 ## 2、下载最近的快照文件到服务器
 
-如：00ec05ba1d16aafae795ce3bbfff4313a5130e8aafcb976bdacd54764d3b1198.tar.gz
+wget -c https://raw.githubusercontent.com/awaketeam/eosc_snapshots/master/xxxx.tar.gz
+
+注意下载的url，不是 https://github.com/ 开头的，将实际的文件名，替换上面的 xxxx.tar.gz
 
 ## 3、解压下载的文件，并移动复制到节点数据目录(以node_data为例)
 ```
