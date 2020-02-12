@@ -49,6 +49,17 @@ eosforce/node:v1.8.3 /opt/eosio/bin/nodeos \
 --snapshot=/eosforce/snapshot.bin
 ```
 
+相关参数说明
+| 名称   | 描述                                    | 补充说明                                                                                                            |
+|:-------|:----------------------------------------|:--------------------------------------------------------------------------------------------------------------------|
+| -d     | 指定容器运行于前台还是后台，默认为false | 将node节点在后台运行                                                                                                |
+| --name | 给容器命名                              | --name eosforce-snapshot 是给容器起名为eosforce-snapshot                                                            |
+| -v     | 给容器挂载存储卷，挂载到容器的某个目录  | -v /node_data:/eosforce 是将宿主机的/node_data目录挂载到docker里面的/eosforce，这个目录就是宿主机和docker共享的 |
+| -p     | 指定容器暴露的端口                      | -p 9876:9876 将docker的39876端口挂载到宿主机的9876端口，这样可以通过宿主机的9876端口访问到docker的9876端口     |
+|/opt/eosio/bin/nodeos --config-dir=/eosforce/config --data-dir=/eosforce/data --snapshot=/eosforce/snapshot.bin| 启动node节点的命令，这里面指定了--config-dir，--data-dir，--snapshot 三个参数，地址需要时docker里面目录地址。||
+
+
+
 ## 7、查看容器日志，等到同步完成时。停止预备容器
 ```
 docker logs -f --tail 100 eosforce-snapshot
