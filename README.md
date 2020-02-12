@@ -44,7 +44,6 @@ plugin = eosio::producer_api_plugin
 ```
 docker run -d --name eosforce-snapshot \
 -v /node_data:/eosforce \
--p 9876:9876 -p 8888:8888 \
 eosforce/node:v1.8.3 /opt/eosio/bin/nodeos \
 --config-dir=/eosforce/config \
 --data-dir=/eosforce/data \
